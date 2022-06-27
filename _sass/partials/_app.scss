@@ -30,26 +30,6 @@ header {
 }
 
 
-.intro-home{
-  display:flex;
-  flex-direction:row;
-  
-}
-.intro-home .col{
-  display:flex;
-  max-width:600px;
-}
-.intro-home .col:nth-child(1) {
-  flex-direction:column;
-  justify-content: center;
-  width:40%;
-}
-.intro-home .col:nth-child(1) h1{
-  font-size:50px;
-}
-.intro-home .col:nth-child(2) {
-  width:60%;
-}
 
 
 // logo, is a grid item
@@ -74,73 +54,191 @@ header > h1 {
   }
 }
 
-header > nav ul ul{
-    display:none;
-    background: #000;
-    position: absolute;
-    backdrop-filter: blur(20px);
-    color: #000;
-    filter: invert(1);
-    padding: 10px;
-    margin: 10px;
-    border-radius: 10px;
+
+// menu
+
+.navigation__checkbox {
+  display: none;
 }
 
-header > nav ul ul li a{
-  font-size: 16px;
+.navigation__button {
+  position: fixed;
+  top: 1.5rem;
+  right: 1.5rem;
+  height: 5rem;
+  width: 5rem;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 50%;
+  z-index: 300;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 
-header > nav li:hover > ul{
-    display:flex;
-    flex-direction:column;
-}
-
-header > nav ul{
-  @media screen and (max-width: $screen-lg-min) {
-    flex-direction: column;
-    z-index: 99999;
-    background: #ccc;
-    padding: 50px 15px;
+@media screen  and (min-width: 768px) {
+  .navigation__button {
+      top: 4rem;
+      right: 4rem;
+      height: 7rem;
+      width: 7rem;
   }
 }
 
-// main menu, is a grid item
-header > nav {
-  @media screen and (max-width: $screen-lg-min) {
-    display: flex;
-    position: absolute;
-    flex-direction: column;
-    left: 0;
-    top: 0;
-    width: 100%;
-  }
-  ul {
-    // flexbox is better than grid for distributing an unknown qty of children
-    display: flex;
-    li {
-      margin-right: 2rem;
-      display: inline-block;
-      @media screen and (min-width: $screen-sm-min) {
-        margin-right: 0;
-      }
-      a,
-      a:visited {
-        color: white;
-        text-decoration: none;
-        border: 0;
-        @media screen and (min-width: $screen-sm-min) {
-          padding: 1rem;
-        }
-        &[data-current="current page"] {
-          // you can add an active nav item style here
-        }
-      }
-      a:hover {
-        color: white;
-      }
-    }
+.navigation__background {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  background: #4A676A;
+  background-size: cover;
+  background-position: center;
+  z-index: 100;
+  transition: all 800ms cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+@media screen and (min-width: 768px) {
+  .navigation__background {
+      top: 4.5rem;
+      right: 4.5rem;
+      height: 6rem;
+      width: 6rem;
   }
 }
+
+.navigation__nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  opacity: 0;
+  width: 0;
+  visibility: hidden;
+  z-index: 200;
+  transition: all 800ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.navigation__list {
+  /*@include center;*/
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+  list-style: none;
+}
+
+.navigation__item {
+  margin: 1rem;
+}
+
+.navigation__link:link,
+.navigation__link:visited {
+  display: inline-block;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  color: #f4f4f4;
+  font-size: 2.4rem;
+  text-decoration: none;
+  transition: all .2s;
+}
+
+@media(min-width: 768px) {
+  .navigation__link:link,
+  .navigation__link:visited {
+      font-size: 3.8rem;
+  }
+}
+
+.navigation__link span {
+  margin-right: 1.5rem;
+  display: inline-block;
+}
+
+.navigation__link:hover {
+  color: #C1D0D0;
+  transform: scale(1.1);
+}
+
+.navigation__checkbox:checked~.navigation__background {
+  transform: scale(80)
+}
+
+.navigation__checkbox:checked~.navigation__nav {
+  width: 100%;
+  visibility: visible;
+  opacity: 1;
+}
+
+.navigation__icon {
+
+  position: relative;
+  margin-top: 2.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .navigation__icon {
+      margin-top: 3.5rem;
+  }
+}
+
+.navigation__icon,
+.navigation__icon::before,
+.navigation__icon::after {
+  display: inline-block;
+  width: 2.2rem;
+  height: 2px;
+  background-color: #4A676A;
+}
+
+@media (min-width: 768px) {
+  .navigation__icon,
+  .navigation__icon::before,
+  .navigation__icon::after {
+      width: 3rem;
+  }
+}
+
+.navigation__icon::before,
+.navigation__icon::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  transition: all 200ms;
+}
+
+.navigation__icon::before {
+  top: -.8rem;
+}
+
+.navigation__icon::after {
+  top: .8rem;
+}
+
+.navigation__button:hover .navigation__icon::before {
+  top: -1rem;
+}
+
+.navigation__button:hover .navigation__icon::after {
+  top: 1rem;
+}
+
+.navigation__checkbox:checked+.navigation__button .navigation__icon {
+  background-color: transparent;
+}
+
+.navigation__checkbox:checked+.navigation__button .navigation__icon::before {
+  top: 0;
+  transform: rotate(135deg);
+}
+
+.navigation__checkbox:checked+.navigation__button .navigation__icon::after {
+  top: 0;
+  transform: rotate(-135deg);
+}
+
 
 // our main content wrapper, the width scales with font size
 main {
