@@ -14,3 +14,7 @@ intro_paragraph: >
 </div>
 
 <div style="height:100vh"></div>
+
+<div class="container-home-main">
+
+</div>
