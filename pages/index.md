@@ -13,4 +13,4 @@ intro_paragraph: >
     </div>
 </div>
 
-<div style="heigth:100vh"></div>
+<div style="height:100vh"></div>
