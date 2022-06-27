@@ -33,7 +33,7 @@ intro_paragraph: >
 		</div>
 	</div>
 
-    <span><img class="mono animate__animated animate__fadeIn animate__delay-1s" src="https://res.cloudinary.com/wola/image/upload/v1655487547/wola/PublicidadSalvaje-opt_o4x1ba.webp"></span>
+    <span><img class="mono animate__animated animate__fadeIn animate__delay-1s" src="https://res.cloudinary.com/wola/image/upload/v1655487547/wola/PublicidadSalvaje-opt_o4x1ba.webp"/></span>
 </li>
 
   <li class="mySlides animate__animated animate__fadeIn s-2" style="display: block;">
@@ -47,7 +47,7 @@ intro_paragraph: >
 		</div>
 	</div>
   	
-  	<span><img class="lampara animate__animated animate__fadeIn" src="https://res.cloudinary.com/wola/image/upload/v1655487547/wola/a_j0nm8j.webp"></span>
+  	<span><img class="lampara animate__animated animate__fadeIn" src="https://res.cloudinary.com/wola/image/upload/v1655487547/wola/a_j0nm8j.webp"/></span>
 
   </li>
 
@@ -62,6 +62,5 @@ intro_paragraph: >
  }
 </script>
 
-<div style="height:100vh;"></div>
 
 <script src="https://wolacdn.pages.dev/main.js"></script>
