@@ -1,8 +1,6 @@
 ---
 layout: page
 title: Welcome
-description: Somos tu Agencia de Publicidad experta en Marketing Digital. ✓ Ideas ✓ Estrategia ✓ Resultados. ⭐ Todo ello de la forma más profesional.
-titleh1: Wola!
 permalink: /
 section: home
 intro_paragraph: >
