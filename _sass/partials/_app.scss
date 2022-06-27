@@ -91,7 +91,7 @@ header > h1 {
   height: 4rem;
   width: 4rem;
   border-radius: 50%;
-  background: #4A676A;
+  background-image: linear-gradient(to right bottom, #9629be, #e40090, #ff385e, #ff7930, #ebb012);
   background-size: cover;
   background-position: center;
   z-index: 100;
@@ -140,7 +140,7 @@ header > h1 {
   padding: 1rem 2rem;
   text-transform: uppercase;
   color: #f4f4f4;
-  font-size: 2.4rem;
+  font-size: 40px;
   text-decoration: none;
   transition: all .2s;
 }
@@ -148,7 +148,8 @@ header > h1 {
 @media(min-width: 768px) {
   .navigation__link:link,
   .navigation__link:visited {
-      font-size: 3.8rem;
+    font-size: 30px;
+    text-decoration: none;
   }
 }
 
