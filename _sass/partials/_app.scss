@@ -19,7 +19,7 @@ header {
   display: flex;
   background-color: #ffffff4d;
   backdrop-filter: blur(10px);
-  padding: 2rem;
+  padding: 15px;
   position:fixed;
   width:100%;
   justify-content: space-between;
@@ -63,10 +63,10 @@ header > h1 {
 
 .navigation__button {
   position: fixed;
-  top: 10px;
+  top: 5px;
   right: 20px;
-  height: 5rem;
-  width: 5rem;
+  height: 4rem;
+  width: 4rem;
   text-align: center;
   background-color: #fff;
   border-radius: 50%;
@@ -77,19 +77,19 @@ header > h1 {
 
 @media screen  and (min-width: 768px) {
   .navigation__button {
-    top: 10px;
+    top: 5px;
     right: 20px;
-    height: 5rem;
-    width: 5rem;
+    height: 4rem;
+    width: 4rem;
   }
 }
 
 .navigation__background {
   position: fixed;
-  top: 17px;
+  top: 12px;
   right: 26px;
-  height: 4rem;
-  width: 4rem;
+  height: 3rem;
+  width: 3rem;
   border-radius: 50%;
   background-image: linear-gradient(to right bottom, #9629be, #e40090, #ff385e, #ff7930, #ebb012);
   background-size: cover;
@@ -100,10 +100,10 @@ header > h1 {
 
 @media screen and (min-width: 768px) {
   .navigation__background {
-    top: 17px;
+    top: 12px;
     right: 26px;
-    height: 4rem;
-    width: 4rem;
+    height: 3rem;
+    width: 3rem;
   }
 }
 
@@ -177,12 +177,12 @@ header > h1 {
 .navigation__icon {
 
   position: relative;
-  margin-top: 35px;
+  margin-top: 28px;
 }
 
 @media screen and (min-width: 768px) {
   .navigation__icon {
-    margin-top: 35px;
+    margin-top: 28px;
   }
 }
 
@@ -199,7 +199,7 @@ header > h1 {
   .navigation__icon,
   .navigation__icon::before,
   .navigation__icon::after {
-      width: 3rem;
+    width: 2.2rem;
   }
 }
 
